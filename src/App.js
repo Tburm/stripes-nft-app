@@ -14,18 +14,19 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 
 function App() {
-  const { activateBrowserWallet, active, account, library, chainId } = useEthers()
+  const { activateBrowserWallet, active, account, library, chainId, error } = useEthers()
 
   let newProps = {
     active: active,
     account: account,
     library: library,
-    chainId: chainId
+    chainId: chainId,
+    error: error
   }
 
   return (
     <div className="grid grid-flow-row" id="app">
-      <div className="content overflow-y-hidden overflow-y-scroll">
+      <div className="content bg-primary-100">
         <Router>
           <Navbar {...newProps}/>
           <Switch>

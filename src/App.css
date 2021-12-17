@@ -12,3 +12,11 @@
   text-align: center;
   height: 100vh;
 }
+
+.btn {
+  @apply bg-white rounded-lg border border-white
+}
+
+.btn:hover {
+  @apply border-gray-300
+}

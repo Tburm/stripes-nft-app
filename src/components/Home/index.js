@@ -2,8 +2,10 @@ import React from 'react';
 
 function Home(props) {
     return (
-      <div className="">
-        <p>Hello, world</p>
+      <div className="flex flex-row justify-center w-full">
+        <div className="card w-3/5">
+          <p>Hello, world</p>
+        </div>
       </div>
     )
 }

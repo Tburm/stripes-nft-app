@@ -13,10 +13,18 @@
   height: 100vh;
 }
 
+#content {
+  width: 100vw;
+}
+
 .btn {
   @apply bg-white rounded-lg border border-white
 }
 
 .btn:hover {
-  @apply border-gray-300
+  @apply border-gray-300 bg-gray-100
+}
+
+.card {
+  @apply m-4 p-4 bg-white max-w-3xl rounded-lg shadow-sm
 }

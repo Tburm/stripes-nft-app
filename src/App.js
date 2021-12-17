@@ -25,8 +25,8 @@ function App() {
   }
 
   return (
-    <div className="grid grid-flow-row" id="app">
-      <div className="content bg-primary-100">
+    <div className="bg-primary-100" id="app">
+      <div id="content">
         <Router>
           <Navbar {...newProps}/>
           <Switch>

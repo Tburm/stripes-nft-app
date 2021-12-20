@@ -27,7 +27,6 @@ function Gallery(props) {
                 try {
                     var rawUri = await contract.tokenURI(tkn_id)
                     var decodedUri = atob(rawUri.split(',')[1])
-                    console.log(decodedUri)
                     var encodedSvg = JSON.parse(decodedUri)['image']
                     allSvgs.push({
                         'token_id': tkn_id,

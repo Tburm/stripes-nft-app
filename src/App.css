@@ -1,3 +1,36 @@
-.App {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
   text-align: center;
+  height: 100vh;
+}
+
+#content {
+  width: 100vw;
+}
+
+.btn {
+  @apply bg-gray-100 rounded-lg border border-gray-100 my-1 px-6 py-1 shadow-sm
+}
+
+.btn:hover {
+  @apply border-gray-300 bg-gray-200
+}
+
+.card {
+  @apply m-4 p-4 bg-white max-w-3xl rounded-lg shadow-sm
+}
+
+img.gallery-img {
+  @apply h-full w-full;
+  border: 2px solid;
+  border-color: #000000;
 }

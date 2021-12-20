@@ -28,3 +28,9 @@
 .card {
   @apply m-4 p-4 bg-white max-w-3xl rounded-lg shadow-sm
 }
+
+img.gallery-img {
+  @apply h-full w-full;
+  border: 2px solid;
+  border-color: #000000;
+}

@@ -18,11 +18,11 @@
 }
 
 .btn {
-  @apply bg-white rounded-lg border border-white
+  @apply bg-gray-100 rounded-lg border border-gray-100 my-1 px-6 py-1 shadow-sm
 }
 
 .btn:hover {
-  @apply border-gray-300 bg-gray-100
+  @apply border-gray-300 bg-gray-200
 }
 
 .card {

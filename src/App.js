@@ -13,6 +13,10 @@ import './App.css';
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 
+// data
+import addresses from "./data/addresses.json";
+import abis from "./data/abis.js";
+
 function App() {
   const { activateBrowserWallet, active, account, library, chainId, error } = useEthers()
 
@@ -21,7 +25,9 @@ function App() {
     account: account,
     library: library,
     chainId: chainId,
-    error: error
+    error: error,
+    abis: abis,
+    addresses: chainId && addresses[chainId.toString()] ? addresses[chainId.toString()]: undefined
   }
 
   return (
@@ -30,7 +36,9 @@ function App() {
         <Router>
           <Navbar {...newProps}/>
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/">
+              <Home {...newProps} />
+            </Route>
           </Switch>
         </Router>
       </div>

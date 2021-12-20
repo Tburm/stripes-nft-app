@@ -9,7 +9,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "@usedapp/core": "^0.5.4",
+    "@usedapp/core": "https://gitpkg.now.sh/Tburm/useDApp/packages/core",
     "autoprefixer": "^9",
     "bootstrap": "5.1.3",
     "postcss": "^7",
@@ -45,5 +45,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }

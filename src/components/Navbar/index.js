@@ -3,7 +3,7 @@ import {
   Link
 } from "react-router-dom";
 import { FiMenu } from 'react-icons/fi';
-import { useEthers } from '@usedapp/core';
+import { useEthers } from '@usedapp/core'
 import './index.css';
 
 function Navbar(props) {
@@ -30,10 +30,10 @@ function Navbar(props) {
 
       <ul className={renderClasses()}>
         <li>
-          <button className="btn my-1 px-6 py-1" onClick={() => activateBrowserWallet()}>
+          <button className="btn" onClick={() => activateBrowserWallet()}>
             {!props.error ?
               props.account ?
-                props.chainId === 588 || props.chainId === 1088 ?
+                props.chainId === 588 || props.chainId === 1088 || props.chainId === 31337 ?
                   <p>{props.account.slice(0, 4) + "..." + props.account.slice(props.account.length-4, props.account.length)}</p>
                   :
                   "Wrong network"

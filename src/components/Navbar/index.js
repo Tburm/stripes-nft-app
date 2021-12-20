@@ -25,7 +25,7 @@ function Navbar(props) {
   return (
     <nav className="px-5 flex items-center justify-between">
       <div className="logo flex ml-3 flex-row items-center">
-        <a className="link text-3xl" href="/"><h4 className="whitespace-nowrap">Metis Minter</h4></a>
+        <a className="link text-3xl" href="/"><h4 className="whitespace-nowrap">Stripes</h4></a>
       </div>
 
       <ul className={renderClasses()}>

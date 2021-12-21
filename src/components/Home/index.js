@@ -3,6 +3,7 @@ import React from 'react';
 // components
 import MintButton from '../MintButton'
 import Gallery from '../Gallery'
+import RecentGallery from '../RecentGallery'
 
 function Home(props) {
   if(props.addresses) {
@@ -13,6 +14,9 @@ function Home(props) {
         </div>
         <div className="card w-3/5">
           <Gallery {...props} />
+        </div>
+        <div className="card w-3/5">
+          <RecentGallery {...props} />
         </div>
       </div>
     )

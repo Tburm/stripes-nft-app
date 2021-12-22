@@ -41,7 +41,7 @@ function Home(props) {
           <About {...props} />
         </div>
         <div className="card w-3/5">
-          <p>Connect to Metis Stardust</p>
+          <p className="text-center">Connect to Metis Stardust</p>
         </div>
         <div className="w-3/5">
           <Footer {...props} />

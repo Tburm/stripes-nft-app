@@ -50,10 +50,13 @@ function Gallery(props) {
     if (tokens && imgSvgs) {
         return (
             <div className="flex flex-col items-center w-full px-3">
-                <h2>
+                <h1 className="text-xl mb-1">
+                    Your Stripes
+                </h1>
+                <p>
                     You own {tokens.length} Stripes
-                </h2>
-                <div className='grid grid-cols-5 gap-2 place-items-center mt-6 mb-6'>
+                </p>
+                <div className='grid grid-cols-5 gap-2 place-items-center my-2'>
                     {
                         imgSvgs.map((imgObj) => {
                             let isSelected = imgObj['token_id'] === props.selectedToken
@@ -67,7 +70,7 @@ function Gallery(props) {
         )
     } else {
         return (
-            <p>Loading...</p>
+            <p className="text-center">Loading...</p>
         )
     }
 }

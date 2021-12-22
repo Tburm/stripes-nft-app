@@ -3,16 +3,7 @@ import { useEthers } from '@usedapp/core'
 import './index.css';
 
 function Navbar(props) {
-  const [navLinkOpen, navLinkToggle] = useState(false)
   const { activateBrowserWallet } = useEthers()
-
-  const renderClasses = () => {
-    let classes = "flex justify-around items-center"
-    if (navLinkOpen) {
-      classes += " active"
-    }
-    return classes
-  }
 
   return (
     <nav className="px-5 flex items-center justify-between">
@@ -20,7 +11,7 @@ function Navbar(props) {
         <a className="link text-3xl" href="/"><h4 className="text-gray-200">Stripes</h4></a>
       </div>
 
-      <ul className={renderClasses()}>
+      <ul className="flex justify-around items-center">
         <li>
           <button className="btn" id="connect-btn" onClick={() => activateBrowserWallet()}>
             {!props.error ?

@@ -3,9 +3,12 @@
 @tailwind utilities;
 
 * {
+  @apply text-sm md:text-base lg:text-lg;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+  font-family: 'Yantramanav', sans-serif;
 }
 
 ul {
@@ -18,7 +21,6 @@ body {
 }
 
 #app {
-  text-align: center;
   height: 100vh;
 }
 

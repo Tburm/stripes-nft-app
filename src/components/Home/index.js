@@ -13,8 +13,8 @@ function Home(props) {
   if(props.addresses) {
     return (
       <div className="flex flex-col items-center w-full">
-        <div className="card w-1/6">
-          <img tokenid="12" class="gallery-img" src={"data:image/svg+xml;base64,"+IMG} alt="NFT" />
+        <div className="card w-2/6 lg:w-1/6">
+          <img className="gallery-img" src={"data:image/svg+xml;base64,"+IMG} alt="NFT" />
         </div>
         <div className="card w-3/5">
           <About {...props} />
@@ -34,11 +34,14 @@ function Home(props) {
   } else {
     return (
       <div className="flex flex-col items-center w-full">
+        <div className="card w-2/6 lg:w-1/6">
+          <img tokenid="12" className="gallery-img" src={"data:image/svg+xml;base64," + IMG} alt="NFT" />
+        </div>
         <div className="card w-3/5">
           <About {...props} />
         </div>
         <div className="card w-3/5">
-          <p>Connect to Metis Stardust</p>
+          <p className="text-center">Connect to Metis Stardust</p>
         </div>
         <div className="w-3/5">
           <Footer {...props} />

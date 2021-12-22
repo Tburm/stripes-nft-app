@@ -21,6 +21,9 @@ function About(props) {
           <li>Speed (1-10 second loop)</li>
         </ul>
       </p>
+      <p className="mt-4 w-full">
+        Minting is free except the cost of gas. Click the button below to get a STRIPE!
+      </p>
     </div>
   )
 }

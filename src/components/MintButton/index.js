@@ -14,7 +14,7 @@ function MintButton(props) {
     };
 
     return (
-        <button className='btn' id="mintButton" onClick={onMintPressed} disabled={false}>
+        <button id='mint-btn' className='btn' onClick={onMintPressed} disabled={false}>
             Mint
         </button>
     )

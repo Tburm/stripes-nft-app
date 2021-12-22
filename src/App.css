@@ -8,9 +8,14 @@
   box-sizing: border-box;
 }
 
+body {
+  @apply bg-gray-800;
+  overflow: overlay;
+}
+
 #app {
   text-align: center;
-  height: 100%;
+  height: 100vh;
 }
 
 #content {
@@ -18,7 +23,11 @@
 }
 
 .btn {
-  @apply bg-gray-100 rounded-lg border border-gray-100 my-1 px-6 py-1 shadow-sm
+  @apply bg-gray-100 rounded-lg border border-gray-100 my-1 px-6 py-1 shadow-md
+}
+
+#mint-btn {
+  @apply text-3xl px-24 py-2
 }
 
 .btn:hover {
@@ -26,7 +35,7 @@
 }
 
 .card {
-  @apply m-4 p-4 bg-white max-w-3xl rounded-lg shadow-sm
+  @apply m-4 p-4 bg-gray-200 max-w-3xl rounded-lg shadow-md
 }
 
 img.gallery-img {

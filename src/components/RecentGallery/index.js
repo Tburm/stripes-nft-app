@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Contract } from '@ethersproject/contracts';
 
-var _ = require('lodash');
-
 function Gallery(props) {
     let [tokens, setTokens] = useState();
     let [imgSvgs, setImgSvgs] = useState();
-    let contract = new Contract(props.addresses.nft, props.abis.nft, props.library)
 
     useEffect(() => {
+        let contract = new Contract(props.addresses.nft, props.abis.nft, props.library)
         async function getTokens() {
             var tokenSupply = await contract.totalSupply()
             tokenSupply = tokenSupply.toNumber()
@@ -23,6 +21,7 @@ function Gallery(props) {
     }, [props]);
 
     useEffect(() => {
+        let contract = new Contract(props.addresses.nft, props.abis.nft, props.library)
         async function getImages() {
             var allSvgs = []
             for (var tkn_id of tokens) {
@@ -58,7 +57,7 @@ function Gallery(props) {
                 <div className='grid grid-cols-5 gap-2 place-items-center mt-6 mb-6'>
                     {
                         imgSvgs.map((imgObj) => {
-                            let isSelected = imgObj['token_id'] == props.selectedToken
+                            let isSelected = imgObj['token_id'] === props.selectedToken
                             return (
                                 <img key={imgObj['token_id']} tokenid={imgObj['token_id']} className="gallery-img" src={imgObj['img_svg']} alt="NFT"/>
                             )

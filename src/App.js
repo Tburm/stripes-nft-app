@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   HashRouter as Router,
   Switch,
@@ -18,7 +18,7 @@ import addresses from "./data/addresses.json";
 import abis from "./data/abis.js";
 
 function App() {
-  const { activateBrowserWallet, active, account, library, chainId, error } = useEthers()
+  const { active, account, library, chainId, error } = useEthers()
 
   let newProps = {
     active: active,
@@ -31,7 +31,7 @@ function App() {
   }
 
   return (
-    <div className="bg-primary-100" id="app">
+    <div id="app">
       <div id="content">
         <Router>
           <Navbar {...newProps}/>

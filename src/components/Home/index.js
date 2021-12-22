@@ -1,5 +1,4 @@
 import React from 'react';
-import { BsGithub } from 'react-icons/bs';
 
 // components
 import About from '../About'
@@ -15,9 +14,7 @@ function Home(props) {
         <div className="card w-3/5">
           <About {...props} />
         </div>
-        <div className="card w-3/5">
-          <MintButton {...props} />
-        </div>
+        <MintButton {...props} />
         <div className="card w-3/5">
           <Gallery {...props} />
         </div>

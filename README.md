@@ -1,6 +1,6 @@
 # Stripes NFT App
 
-A frontend dapp for minting the Stripes NFT on Metis. You can access the minting app [here](https://stripes.troyb.xyz/#/).
+A frontend dapp for minting the Stripes NFT on Metis. You can access the minting app (here)[https://stripes.troyb.xyz/#/].
 
 ## Technical Details
 

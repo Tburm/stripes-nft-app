@@ -10,9 +10,12 @@ function Gallery(props) {
 
     useEffect(() => {
         async function getTokens() {
-            var newTokens = await contract.walletOfOwner(props.account)
-            newTokens = newTokens.map((val) => { return val.toNumber() })
-            newTokens = _.sortBy(newTokens)
+            var tokenSupply = await contract.totalSupply()
+            tokenSupply = tokenSupply.toNumber()
+            let numToken = Math.min(tokenSupply, 5)
+            let shiftToken = Math.max(0, tokenSupply - numToken)
+            
+            let newTokens = [...Array(numToken).keys()].map(i => i + shiftToken);
             setTokens(newTokens)
         }
 
@@ -50,7 +53,7 @@ function Gallery(props) {
         return (
             <div className="flex flex-col items-center w-full px-3">
                 <h2>
-                    You own {tokens.length} Stripes
+                    Recently Minted Stripes
                 </h2>
                 <div className='grid grid-cols-5 gap-2 place-items-center mt-6 mb-6'>
                     {

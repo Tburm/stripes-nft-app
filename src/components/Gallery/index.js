@@ -56,7 +56,7 @@ function Gallery(props) {
                 <p>
                     You own {tokens.length} Stripes
                 </p>
-                <div className='grid grid-cols-5 gap-2 place-items-center my-2'>
+                <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2 place-items-center my-2'>
                     {
                         imgSvgs.map((imgObj) => {
                             let isSelected = imgObj['token_id'] === props.selectedToken

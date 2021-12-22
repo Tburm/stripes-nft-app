@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 * {
+  @apply text-sm md:text-base lg:text-lg;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

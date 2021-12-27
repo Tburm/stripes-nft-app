@@ -13,7 +13,7 @@ function Footer(props) {
           <BsGithub className="text-3xl" />
           <p>App</p>
         </a>
-      <a className="flex flex-col items-center" href="https://stardust-explorer.metis.io/address/0x36c27551BED3E1dB018FC93807378e312d3Bb397/transactions">
+      <a className="flex flex-col items-center" href="https://stardust-explorer.metis.io/address/0x11d2223A617480EA2FD5aE7EB7b0d20C00151F21/transactions">
           <BsFillGrid3X3GapFill className="text-3xl" />
           <p>Block Explorer</p>
         </a>
